@@ -41,4 +41,8 @@ public class PreferencesProvider {
 
         return isLogin;
     }
+
+    public static void clear(){
+        sharedPreferences.edit().clear().apply();
+    }
 }

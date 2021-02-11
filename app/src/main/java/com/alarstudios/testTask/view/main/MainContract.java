@@ -14,11 +14,16 @@ public interface MainContract {
 
     interface View {
         void setDatToRecyclerView(List items);
+        void showProgress();
+        void hideProgress();
+        void exitApp();
     }
 
 
 
     interface Presenter {
+        void getMoreDate(int page);
         void requestDataFromServer();
+        void exitApp();
     }
 }

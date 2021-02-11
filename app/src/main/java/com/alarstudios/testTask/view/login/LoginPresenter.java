@@ -17,16 +17,31 @@ public class LoginPresenter implements LoginContractor.Presenter, LoginContracto
 
     @Override
     public void clickLogin(Editable username, Editable password) {
-        model.login(username.toString(), password.toString(), this);
+        if (!view.checkField()){
+            Log.d(TAG, "clickLogin: ");
+            view.showProgress();
+            model.login(username.toString(), password.toString(), this);
+        } else {
+            view.emptyField();
+        }
     }
+
 
     @Override
     public void onFinished(String code) {
+        view.hideProgress();
         view.showSuccess(code);
     }
 
     @Override
     public void onFailure() {
+        view.hideProgress();
         view.showError();
+    }
+
+    @Override
+    public void onConnection() {
+        view.hideProgress();
+        view.noConnection();
     }
 }

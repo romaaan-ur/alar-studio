@@ -22,7 +22,6 @@ public class LoginModel implements LoginContractor.Model {
             public void onResponse(Call<Login> call, Response<Login> response) {
 
                 if (response.body().getStatus().equals("ok")){
-//                    onResponseListener.saveCredential(response.body().getCode());
                     onResponseListener.onFinished(response.body().getCode());
                 }
 
@@ -32,7 +31,7 @@ public class LoginModel implements LoginContractor.Model {
 
             @Override
             public void onFailure(Call<Login> call, Throwable t) {
-                onResponseListener.onFailure();
+                onResponseListener.onConnection();
             }
         });
     }

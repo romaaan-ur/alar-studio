@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.item.ItemActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/card_item">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tooltipText="test"
+                tools:text="KTIX" />
+
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="SPACE COAST RGNL" />
+
+            <TextView
+                android:id="@+id/card_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="United States of America" />
+            <TextView
+                android:id="@+id/card_lat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="28.5148" />
+            <TextView
+                android:id="@+id/card_lon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="-80.79922777777777" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ public interface LoginContractor {
         interface onResponseListener {
             void onFinished(String code);
             void onFailure();
+            void onConnection();
         }
 
         void login(String username, String password, onResponseListener onResponseListener);
@@ -19,6 +20,10 @@ public interface LoginContractor {
         void showSuccess(String code);
         void showError();
         void noConnection();
+        boolean checkField();
+        void emptyField();
+        void showProgress();
+        void hideProgress();
     }
 
     interface Presenter {
