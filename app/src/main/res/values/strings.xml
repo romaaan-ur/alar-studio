@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Alar Studio Test</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="incorrect_password">Неправильный логин/пароль</string>
+    <string name="failed_connection">Проверьте ваше интернет-соединение</string>
+</resources>
